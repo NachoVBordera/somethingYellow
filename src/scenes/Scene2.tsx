@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const Scene2 = () => {
+  //range 2000 3000
   return (
     <motion.div
       style={{
@@ -26,14 +27,25 @@ const Scene2 = () => {
         src="/assets/9.png"
         alt={`Imagen 6`}
       />
+      <motion.img
+        style={{
+          width: "90%",
+          height: "auto",
+          position: "absolute",
+          bottom: -80,
+          left: 150,
+        }}
+        src="/assets/11.png"
+        alt={`Imagen 6`}
+      />
       <motion.p
         style={{
-          fontSize: "5rem",
+          fontSize: "3.5rem",
           zIndex: 1,
-          width: "70%",
-          marginLeft: "30%",
+          width: "35%",
+          marginLeft: "70%",
           fontFamily: "Spline Sans Mono, monospace",
-          textWrap: "balance",
+          textOverflow: "ellipsis",
         }}
       >
         Cada vez que abro la puerta, parece que el tiempo se haya esfumado, que

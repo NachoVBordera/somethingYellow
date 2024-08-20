@@ -27,8 +27,8 @@ const Notification: React.FC<Props> = ({ text }) => {
           style={{
             display: "block",
             position: "fixed",
-            top: 10,
-            right: 10,
+            top: 15,
+            right: 15,
             border: "1px solid",
             padding: "1rem",
             fontFamily: "Spline Sans Mono, monospace",

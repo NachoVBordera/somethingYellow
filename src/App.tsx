@@ -5,7 +5,12 @@ import ZoomOnScroll from "./test";
 
 function App() {
   return (
-    <main className="main">
+    <main
+      className="main"
+      style={{
+        border: "1px solid white",
+      }}
+    >
       <Notification text="Usa F11 para una experiencia mejor!" />
       <ZoomOnScroll />
     </main>

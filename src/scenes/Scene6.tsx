@@ -6,11 +6,7 @@ const Scene6 = () => {
     <motion.div
       style={{
         height: "100%",
-        display: "flex",
-        gap: "1rem",
         width: "100%",
-        alignItems: "center",
-        justifyContent: "space-between",
         padding: "2rem",
         boxSizing: "border-box",
       }}
@@ -18,8 +14,10 @@ const Scene6 = () => {
       <motion.p
         style={{
           position: "absolute",
-          top: "20%",
-          fontSize: "5rem",
+          top: "30%",
+          right: "17%",
+          fontSize: "4rem",
+          width: "max-content",
           zIndex: 1,
           fontFamily: "Spline Sans Mono, monospace",
           textWrap: "balance",
@@ -30,36 +28,37 @@ const Scene6 = () => {
       <motion.p
         style={{
           position: "absolute",
-          fontFamily: "Spline Sans Mono, monospace",
-          fontSize: "2rem",
-          top: "30%",
-          right: "10%",
-        }}
-      >
-        (una por cada derrota que te ha dado la vida)
-      </motion.p>
-      <motion.p
-        style={{
-          position: "absolute",
-          top: "50%",
-          left: "5%",
-          fontSize: "5rem",
+          top: "39%",
+          right: "18%",
+          fontSize: "0.9rem",
           zIndex: 1,
+          width: "max-content",
           fontFamily: "Spline Sans Mono, monospace",
           textWrap: "balance",
         }}
       >
-        yo aprieto la mandibula e intento sonrreir
+        (una por cada derrota que te ha dado la vida)
       </motion.p>
       <motion.img
-        src="/assets/5.png" // Asegúrate de que la ruta sea correcta
+        src="/assets/5.png"
         alt={`Imagen 6`}
         style={{
-          width: "70%",
+          width: "30%",
           height: "auto",
           position: "absolute",
-          bottom: "0",
+          bottom: "-10%",
           right: "0",
+        }}
+      />
+      <motion.img
+        src="/assets/13.png"
+        alt={`Imagen 6`}
+        style={{
+          width: "30%",
+          height: "auto",
+          position: "absolute",
+          bottom: "-15%",
+          left: "0",
         }}
       />
     </motion.div>

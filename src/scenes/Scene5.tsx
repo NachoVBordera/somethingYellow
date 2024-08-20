@@ -6,25 +6,22 @@ const Scene5 = () => {
     <motion.div
       style={{
         height: "100%",
-        display: "flex",
-        gap: "1rem",
         width: "100%",
-        alignItems: "center",
-        justifyContent: "space-between",
         padding: "2rem",
-        boxSizing: "border-box",
+        border: "1px solid red",
       }}
     >
-      <motion.p
+      <motion.img
+        src="/assets/12.png"
+        alt={`Imagen 6`}
         style={{
-          fontSize: "5rem",
-          zIndex: 1,
-          fontFamily: "Spline Sans Mono, monospace",
-          textWrap: "balance",
+          position: "absolute",
+          top: 30,
+          left: "25%",
+          width: "50%",
+          height: "auto",
         }}
-      >
-        Entro a la habitación, tu te levantas de la silla y das un paso hacia mi
-      </motion.p>
+      />
     </motion.div>
   );
 };

@@ -20,44 +20,63 @@ import ScrollToEndButton from "./components/ScrollToEndButton";
 
 const ComicScenes = () => {
   const scrollY: MotionValue<number> = useMotionValue(0);
-  const maxScroll = 10000;
+  const maxScroll = 1000000;
   // Transformar el scroll en opacidad y escala para cada escena
-  const scene1Opacity = useTransform(scrollY, [0, 300], [1, 0]);
+  const sceneInitialOpacity = useTransform(scrollY, [0, 1000], [1, 0]);
+  const scene1Opacity = useTransform(
+    scrollY,
+    [1000, 1200, 1400, 1800, 2000],
+    [0, 1, 1, 0.8, 0]
+  );
   const scene2Opacity = useTransform(
     scrollY,
-    [300, 700, 800, 900, 950, 1200],
-    [0, 1, 1, 1, 0.8, 0]
-  );
-  const scene3Opacity = useTransform(scrollY, [1400, 1600, 1800], [0, 1, 0]);
-  const scene4Opacity = useTransform(scrollY, [1800, 2000, 2200], [0, 1, 0]);
-  const scene5Opacity = useTransform(scrollY, [2200, 2400, 2600], [0, 1, 0]);
-  const scene6Opacity = useTransform(scrollY, [2600, 2800, 3000], [0, 1, 0]);
-  const scene7Opacity = useTransform(scrollY, [3000, 3200, 3400], [0, 1, 0]);
-  const scene8Opacity = useTransform(scrollY, [3400, 4800, 5000], [0, 1, 0]);
-  const scene9Opacity = useTransform(
-    scrollY,
-    [5200, 5400, 9000, 9200],
+    [2000, 2200, 2800, 3000],
     [0, 1, 1, 0]
   );
-  const scene10Opacity = useTransform(scrollY, [9200, 9400, 9600], [0, 1, 0]);
-  const scene11Opacity = useTransform(scrollY, [9800, 10000], [0, 1]);
+  const scene3Opacity = useTransform(
+    scrollY,
+    [3000, 3200, 4800, 6000],
+    [0, 1, 1, 0]
+  );
+  const scene5Opacity = useTransform(
+    scrollY,
+    [6000, 6200, 6800, 7000],
+    [0, 1, 1, 0]
+  );
+  const scene6Opacity = useTransform(
+    scrollY,
+    [7000, 7200, 7800, 8000],
+    [0, 1, 1, 0]
+  );
+  const scene7Opacity = useTransform(
+    scrollY,
+    [7200, 7400, 9800, 10000],
+    [0, 1, 1, 0]
+  );
+  const scene8Opacity = useTransform(
+    scrollY,
+    [10000, 10200, 13800, 14000],
+    [0, 1, 1, 0]
+  );
+  //  const scene10Opacity = useTransform(scrollY, [9200, 9400, 9600], [0, 1, 0]);
+  //  const scene11Opacity = useTransform(scrollY, [9800, 10000], [0, 1]);
 
   // Transformar el scroll en escala para cada escena
-  const scene1Scale = useTransform(scrollY, [0, 300], [1, 1.5]);
+  const sceneInitialScale = useTransform(scrollY, [0, 1000], [1, 1.5]);
+  const scene1Scale = useTransform(
+    scrollY,
+    [1000, 1200, 1400, 1800, 2000],
+    [0.2, 1, 1, 1.5, 4]
+  );
   const scene2Scale = useTransform(
     scrollY,
-    [300, 700, 800, 900, 1200],
-    [0.2, 1, 1.3, 1.5, 4]
+    [2000, 2200, 2800, 3000],
+    [1, 1, 1, 1.3]
   );
-  const scene3Scale = useTransform(scrollY, [1400, 1600], [1, 1]);
-  const scene4Scale = useTransform(scrollY, [1800, 2000], [0.2, 1]);
-  const scene5Scale = useTransform(scrollY, [2200, 2400], [0.2, 1]);
-  const scene6Scale = useTransform(scrollY, [2600, 2800], [0.2, 1]);
-  const scene7Scale = useTransform(scrollY, [3000, 3200], [0.2, 1]);
-  const scene8Scale = useTransform(scrollY, [3400, 3600], [1, 1]);
-  const scene9Scale = useTransform(scrollY, [3800, 4000], [0.2, 1]);
-  const scene10Scale = useTransform(scrollY, [9200, 9400, 9600], [0.2, 1, 1.5]);
-  const scene11Scale = useTransform(scrollY, [4400, 4600], [0.2, 1]);
+  const scene5Scale = useTransform(scrollY, [6000, 6800, 7000], [1, 1, 1.5]);
+
+  // const scene10Scale = useTransform(scrollY, [9200, 9400, 9600], [0.2, 1, 1.5]);
+  // const scene11Scale = useTransform(scrollY, [4400, 4600], [0.2, 1]);
 
   // TransformOrigin dinámico basado en la transición de la escena 1
   const scene1TransformOrigin = useTransform(
@@ -73,11 +92,11 @@ const ComicScenes = () => {
     ["center center", "center center", "center right", "center rightt"]
   );
 
-  const scene10TransformOrigin = useTransform(
-    scrollY,
-    [300, 700, 800, 1200],
-    ["center center", "center center", "center right", "center rightt"]
-  );
+  // const scene10TransformOrigin = useTransform(
+  //   scrollY,
+  //   [300, 700, 800, 1200],
+  //   ["center center", "center center", "center right", "center rightt"]
+  // );
 
   React.useEffect(() => {
     const handleScroll = (event: WheelEvent) => {
@@ -95,9 +114,10 @@ const ComicScenes = () => {
   return (
     <div
       style={{
-        height: "100vh",
+        height: "99.8vh",
         overflow: "hidden",
         position: "relative",
+        border: "10px solid black",
       }}
     >
       <motion.div
@@ -107,8 +127,8 @@ const ComicScenes = () => {
           left: 0,
           right: 0,
           bottom: 0,
-          opacity: scene1Opacity,
-          scale: scene1Scale,
+          opacity: sceneInitialOpacity,
+          scale: sceneInitialScale,
           transformOrigin: scene1TransformOrigin, // Punto de fuga dinámico
         }}
       >
@@ -121,8 +141,8 @@ const ComicScenes = () => {
           left: 0,
           right: 0,
           bottom: 0,
-          opacity: scene2Opacity,
-          scale: scene2Scale,
+          opacity: scene1Opacity,
+          scale: scene1Scale,
           transformOrigin: scene2TransformOrigin, // Punto de fuga dinámico
         }}
       >
@@ -135,8 +155,8 @@ const ComicScenes = () => {
           left: 0,
           right: 0,
           bottom: 0,
-          opacity: scene3Opacity,
-          scale: scene3Scale,
+          opacity: scene2Opacity,
+          scale: scene2Scale,
         }}
       >
         <Scene2 />
@@ -148,8 +168,7 @@ const ComicScenes = () => {
           left: 0,
           right: 0,
           bottom: 0,
-          opacity: scene4Opacity,
-          scale: scene4Scale,
+          opacity: scene3Opacity,
         }}
       >
         <Scene3 scrollY={scrollY} />
@@ -163,21 +182,6 @@ const ComicScenes = () => {
           bottom: 0,
           opacity: scene5Opacity,
           scale: scene5Scale,
-          transformOrigin: "center right",
-        }}
-      >
-        <Scene4 />
-      </motion.div>
-      <motion.div
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          opacity: scene6Opacity,
-          scale: scene6Scale,
-          transformOrigin: "center right",
         }}
       >
         <Scene5 />
@@ -189,9 +193,7 @@ const ComicScenes = () => {
           left: 0,
           right: 0,
           bottom: 0,
-          opacity: scene7Opacity,
-          scale: scene7Scale,
-          transformOrigin: "center right",
+          opacity: scene6Opacity,
         }}
       >
         <Scene6 />
@@ -203,8 +205,7 @@ const ComicScenes = () => {
           left: 0,
           right: 0,
           bottom: 0,
-          opacity: scene8Opacity,
-          scale: scene8Scale,
+          opacity: scene7Opacity,
           transformOrigin: "center right",
         }}
       >
@@ -217,14 +218,12 @@ const ComicScenes = () => {
           left: 0,
           right: 0,
           bottom: 0,
-          opacity: scene9Opacity,
-          scale: scene9Scale,
-          transformOrigin: "center right",
+          opacity: scene8Opacity,
         }}
       >
         <Scene8 scrollY={scrollY} />
       </motion.div>
-      <motion.div
+      {/*  <motion.div
         style={{
           position: "absolute",
           top: 0,
@@ -250,7 +249,7 @@ const ComicScenes = () => {
         }}
       >
         <Scene10 />
-      </motion.div>
+      </motion.div> */}
       <ScrollToEndButton scrollY={scrollY} maxScroll={maxScroll} />
     </div>
   );
