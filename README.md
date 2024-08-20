@@ -1,50 +1,59 @@
-# React + TypeScript + Vite
+# Por suerte siempre hay algo <span style="color:#F3D333">amarillo</span>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Descripción
 
-Currently, two official plugins are available:
+Este es un proyecto creado para la **KuroJam** en el que se integran el cómic y la web para narrar la experiencia con mi abuela mientras comenzaba a olvidarme debido al Alzheimer. El proceso de creación ha sido difícil, no solo por el reto de adaptar el tema de la jam a la idea que quería transmitir, sino también por el desafío emocional que conlleva. Ha sido duro, pero también sanador, enfrentarse a un recuerdo que me conmueve profundamente.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+> A mi abuela Teo.
 
-## Expanding the ESLint configuration
+### Versión en Inglés
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Project created for the **KuroJam**, where I combined comic art and web design to narrate my experience with my grandmother as she began to forget me due to Alzheimer's. This process has been difficult, not only because of the challenge of adapting the jam's theme to the idea I wanted to convey, but also due to the emotional aspect. It has been tough, but also healing, to face a memory that stirs me so deeply.
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Illustration, Script, and Development
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+**Nacho V. Bordera**
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### Technologies Used
+
+- **React**
+- **Framer Motion**
+- **Vite**
+- **Vercel**
+
+### How to Run the Project Locally
+### Cómo Levantar el Proyecto en Local
+
+Follow these steps to run the project on your local environment:
+
+1. **Clone the repository**
+   ```bash
+    git clone https://github.com/your-username/repo-name.git
+   ```
+2. **Clone the repository**
+  Navigate to the project directory and run:
+   ```bash
+    cd repo-name
+    npm install
+  ```
+3. **Run the project** 
+Start the development server:
+  ```bash
+    cd repo-name
+    npm install
+  ```
+
+### Deployment
+
+The project is deployed on [Vercel](https://vercel.com/). If you wish to deploy your own version, you can follow the instructions in the [Vercel official documentation](https://vercel.com/docs).
+
+### Contributing
+
+If you want to contribute to the project, please open an issue or submit a pull request. We appreciate your contribution.
+
+### License
+
+This project is licensed under the MIT License. For more details, see the [LICENSE](LICENSE) file.
+
