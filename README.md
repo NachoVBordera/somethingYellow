@@ -1,8 +1,9 @@
 # Por suerte siempre hay algo <span style="color:#F3D333">amarillo</span>
+<img src="public/assets/14.png" alt="ne on comic" width="400"/>
 
 ### Descripción
 
-Este es un proyecto creado para la **KuroJam** en el que se integran el cómic y la web para narrar la experiencia con mi abuela mientras comenzaba a olvidarme debido al Alzheimer. El proceso de creación ha sido difícil, no solo por el reto de adaptar el tema de la jam a la idea que quería transmitir, sino también por el desafío emocional que conlleva. Ha sido duro, pero también sanador, enfrentarse a un recuerdo que me conmueve profundamente.
+Este es un proyecto creado para la **KuroJam** en el que se integran el cómic y la web para narrar la experiencia con mi abuela mientras comenzaba a olvidarme debido al Alzheimer. El proceso de creación ha sido difícil, no solo por el reto de adaptar el tema de la jam a la idea que quería transmitir, sino también por el desafío emocional que conlleva. Ha sido duro, pero también sanador enfrentarse a un recuerdo que me remueve tanto.
 
 > A mi abuela Teo.
 
@@ -37,13 +38,12 @@ Follow these steps to run the project on your local environment:
    ```bash
     cd repo-name
     npm install
-  ```
+     ```
 3. **Run the project** 
 Start the development server:
-  ```bash
-    cd repo-name
-    npm install
-  ```
+   ```bash
+    npm run dev
+     ```
 
 ### Deployment
 
