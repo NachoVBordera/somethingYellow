@@ -6,7 +6,6 @@ import ZoomOnScroll from "./test";
 function App() {
   return (
     <main
-      className="main"
       style={{
         border: "1px solid white",
       }}

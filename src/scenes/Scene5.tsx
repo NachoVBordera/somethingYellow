@@ -6,8 +6,7 @@ const Scene5 = () => {
       style={{
         height: "100%",
         width: "100%",
-        padding: "2rem",
-        border: "1px solid red",
+        padding: "2rem"
       }}
     >
       <motion.img

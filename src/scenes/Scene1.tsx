@@ -23,9 +23,8 @@ const Scene1 = () => {
         }}
       >
         Cuando llego a{" "}
-        <span style={{ fontWeight: "initial", color: "#F3D222" }}>casa</span>{" "}
-        siempre hay una habitación a la que{" "}
-        <span style={{ fontWeight: "initial" }}>temo</span> entrar.
+        <span style={{ fontWeight: "initial", color: "#F3D222" }}>casa</span>, 
+        siempre hay una habitación a la que temo entrar.
       </motion.p>
       <motion.img
         src="/assets/6.png" // Asegúrate de que la ruta sea correcta

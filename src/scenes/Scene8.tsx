@@ -58,7 +58,7 @@ const Scene8: React.FC<Scene8Props> = ({ scrollY }) => {
           opacity: Opacity2,
         }}
       >
-        te acercas para observar mi rostro, yo reuno fuerzas para dibujar una
+        te acercas para observar mi rostro, yo reúno <span className="yellow-text">fuerzas</span> para dibujar una
         sonrrisa,
       </motion.p>
       <motion.p
@@ -72,7 +72,7 @@ const Scene8: React.FC<Scene8Props> = ({ scrollY }) => {
           opacity: Opacity3,
         }}
       >
-        tu tomas aliento y me dices:
+        tú tomas aliento y me dices:
       </motion.p>
       <motion.p
         style={{

@@ -25,6 +25,7 @@ const Scene6 = () => {
         Alargas tu mano llena de arrugas
       </motion.p>
       <motion.p
+       className="yellow-text"
         style={{
           position: "absolute",
           top: "39%",

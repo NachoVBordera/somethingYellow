@@ -41,14 +41,14 @@ const Scene2 = () => {
         style={{
           fontSize: "3.5rem",
           zIndex: 1,
-          width: "35%",
+          width: "37%",
           marginLeft: "70%",
           fontFamily: "Spline Sans Mono, monospace",
           textOverflow: "ellipsis",
         }}
       >
-        Cada vez que abro la puerta, parece que el tiempo se haya esfumado, que
-        me asome al precipicio del olvido y un viento frio me arroje a la nada
+        Cada vez que abro <span style={{ fontWeight: "initial", color: "#F3D222" }}>la puerta</span>, parece que el tiempo se haya esfumado, que
+        me asome al precipicio del olvido y un viento frío me arroje a la nada
       </motion.p>
     </motion.div>
   );

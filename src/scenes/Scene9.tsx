@@ -7,19 +7,23 @@ const Scene9 = () => {
         height: "100%",
         width: "100%",
         padding: "2rem",
-        boxSizing: "border-box",
       }}
     >
       <motion.p
         style={{
-          fontSize: "5rem",
-          width: "50%",
+          fontSize: "4rem",
+          width: "33%",
           zIndex: 1,
+          position: "absolute",
+          top: "32%",
+          left: "10%",
           fontFamily: "Spline Sans Mono, monospace",
           textWrap: "balance",
         }}
       >
-        Por suerte, en la mesa siempre hay algo amarillo
+        Por suerte, en la mesa siempre hay un pequeño  
+        {" "}
+        <span className="yellow-text">cuadro</span> amarillo
       </motion.p>
       <motion.img
         src="/assets/2.png"
@@ -28,7 +32,7 @@ const Scene9 = () => {
           position: "absolute",
           bottom: 0,
           right: 0,
-          width: "40%",
+          width: "50%",
           height: "auto",
         }}
       />

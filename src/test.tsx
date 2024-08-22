@@ -13,7 +13,9 @@ import Scene5 from "./scenes/Scene5";
 import Scene6 from "./scenes/Scene6";
 import Scene7 from "./scenes/Scene7";
 import Scene8 from "./scenes/Scene8";
-import ScrollToEndButton from "./components/ScrollToEndButton";
+import Scene9 from "./scenes/Scene9";
+import Scene10 from "./scenes/Scene10";
+import EndScene from "./scenes/EndScene";
 
 const ComicScenes = () => {
   const scrollY: MotionValue<number> = useMotionValue(0);
@@ -55,8 +57,23 @@ const ComicScenes = () => {
     [10000, 10200, 13800, 14000],
     [0, 1, 1, 0]
   );
-  //  const scene10Opacity = useTransform(scrollY, [9200, 9400, 9600], [0, 1, 0]);
-  //  const scene11Opacity = useTransform(scrollY, [9800, 10000], [0, 1]);
+  const scene9Opacity = useTransform(
+    scrollY,
+    [14000, 14200, 14800, 15000],
+    [0, 1, 1, 0]
+  );
+  const scene10Opacity = useTransform(
+    scrollY,
+    [15000, 15200, 15800, 17000],
+    [0, 1, 1, 0]
+  );
+
+  const endSceneOpacity = useTransform(
+    scrollY,
+    [17500, 17800],
+    [0, 1,]
+  );
+
 
   // Transformar el scroll en escala para cada escena
   const sceneInitialScale = useTransform(scrollY, [0, 1000], [1, 1.5]);
@@ -72,8 +89,12 @@ const ComicScenes = () => {
   );
   const scene5Scale = useTransform(scrollY, [6000, 6800, 7000], [1, 1, 1.5]);
 
-  // const scene10Scale = useTransform(scrollY, [9200, 9400, 9600], [0.2, 1, 1.5]);
-  // const scene11Scale = useTransform(scrollY, [4400, 4600], [0.2, 1]);
+  const scene9Scale = useTransform(
+    scrollY,
+    [14000, 14200, 14800, 15000],
+    [1, 1, 1, 2.5]
+  );
+  const scene10Scale = useTransform(scrollY, [4400, 4600], [0.2, 1]);
 
   // TransformOrigin dinámico basado en la transición de la escena 1
   const scene1TransformOrigin = useTransform(
@@ -89,11 +110,11 @@ const ComicScenes = () => {
     ["center center", "center center", "center right", "center rightt"]
   );
 
-  // const scene10TransformOrigin = useTransform(
-  //   scrollY,
-  //   [300, 700, 800, 1200],
-  //   ["center center", "center center", "center right", "center rightt"]
-  // );
+  const scene9TransformOrigin = useTransform(
+    scrollY,
+    [300, 700, 800, 1200],
+    ["center center", "center center", "center right", "center rightt"]
+  );
 
   React.useEffect(() => {
     const handleScroll = (event: WheelEvent) => {
@@ -118,12 +139,8 @@ const ComicScenes = () => {
       }}
     >
       <motion.div
+      className="scene"
         style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
           opacity: sceneInitialOpacity,
           scale: sceneInitialScale,
           transformOrigin: scene1TransformOrigin, // Punto de fuga dinámico
@@ -132,12 +149,8 @@ const ComicScenes = () => {
         <HomeScene />
       </motion.div>
       <motion.div
+      className="scene"
         style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
           opacity: scene1Opacity,
           scale: scene1Scale,
           transformOrigin: scene2TransformOrigin, // Punto de fuga dinámico
@@ -146,12 +159,8 @@ const ComicScenes = () => {
         <Scene1 />
       </motion.div>
       <motion.div
+      className="scene"
         style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
           opacity: scene2Opacity,
           scale: scene2Scale,
         }}
@@ -159,24 +168,16 @@ const ComicScenes = () => {
         <Scene2 />
       </motion.div>
       <motion.div
+      className="scene"
         style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
           opacity: scene3Opacity,
         }}
       >
         <Scene3 scrollY={scrollY} />
       </motion.div>
       <motion.div
+      className="scene"
         style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
           opacity: scene5Opacity,
           scale: scene5Scale,
         }}
@@ -184,24 +185,16 @@ const ComicScenes = () => {
         <Scene5 />
       </motion.div>
       <motion.div
+      className="scene"
         style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
           opacity: scene6Opacity,
         }}
       >
         <Scene6 />
       </motion.div>
       <motion.div
+      className="scene"
         style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
           opacity: scene7Opacity,
           transformOrigin: "center right",
         }}
@@ -209,45 +202,40 @@ const ComicScenes = () => {
         <Scene7 scrollY={scrollY} />
       </motion.div>
       <motion.div
+      className="scene"
         style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
           opacity: scene8Opacity,
         }}
       >
         <Scene8 scrollY={scrollY} />
       </motion.div>
-      {/*  <motion.div
+      <motion.div
+      className="scene"
         style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          opacity: scene10Opacity,
-          scale: scene10Scale,
-          transformOrigin: scene10TransformOrigin,
+          opacity: scene9Opacity,
+          scale: scene9Scale,
+          transformOrigin: scene9TransformOrigin,
         }}
       >
         <Scene9 />
       </motion.div>
       <motion.div
+      className="scene"
         style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          opacity: scene11Opacity,
-          scale: scene11Scale,
+          opacity: scene10Opacity,
+          scale: scene10Scale,
         }}
       >
         <Scene10 />
-      </motion.div> */}
-      <ScrollToEndButton scrollY={scrollY} maxScroll={maxScroll} />
+      </motion.div>
+      <motion.div
+      className="scene"
+        style={{
+          opacity: endSceneOpacity,
+        }}
+      >
+        <EndScene />
+      </motion.div>
     </div>
   );
 };
