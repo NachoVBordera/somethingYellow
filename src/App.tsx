@@ -1,7 +1,7 @@
 import "./App.css";
 import Notification from "./scenes/Notification";
 
-import ZoomOnScroll from "./test";
+import ComicScenes from "./comic";
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       }}
     >
       <Notification text="Usa F11 para una experiencia mejor!" />
-      <ZoomOnScroll />
+      <ComicScenes />
     </main>
   );
 }
